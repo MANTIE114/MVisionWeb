@@ -220,6 +220,19 @@
         flex-direction: column;
     }
 
+    .feature-text {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .feature-image-container {
+        width: 100%;
+    }
+
+    .feature-image {
+        width: 100%;
+    }
+
     .feature-text h2 {
         font-size: 2.5rem;
     }
