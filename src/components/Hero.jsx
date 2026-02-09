@@ -10,7 +10,7 @@ const Hero = () => {
                 <p>尽在 Apple TV MVision</p>
                 <div className="hero-actions">
                     <a href="#purchase">
-                        <button className="cta-primary">立即购买</button>
+                        <button className="cta-primary">立即体验</button>
                     </a>
                 </div>
             </div>

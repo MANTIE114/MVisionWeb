@@ -34,7 +34,7 @@ const PurchaseChannels = () => {
                         <p>关注官方小红书账号，获取最新活动福利与激活码购买。</p>
                         <div className="channel-actions">
                             <a href={xhsGoodsUrl} target="_blank" rel="noopener noreferrer" className="channel-btn goods-btn">
-                                立即购买商品
+                                立即体验
                             </a>
                             <a href={xhsProfileUrl} target="_blank" rel="noopener noreferrer" className="channel-btn profile-btn">
                                 访问官方主页
