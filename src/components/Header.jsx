@@ -20,7 +20,6 @@ const Header = ({ onActivate }) => {
             <div className="header-container">
                 <div className="logo">
                     <img src="/assets/logo.png" alt="MVision Logo" className="logo-img" />
-                    <span className="logo-text">MVision</span>
                 </div>
 
                 <button className={`mobile-menu-toggle ${menuOpen ? 'active' : ''}`} onClick={toggleMenu} aria-label="Toggle Menu">
