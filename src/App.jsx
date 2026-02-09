@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Features from './components/Features';
 import Recommendation from './components/Recommendation';
+import PurchaseChannels from './components/PurchaseChannels';
 import Slogan from './components/Slogan';
 import Footer from './components/Footer';
 import ActivationModal from './components/ActivationModal';
@@ -17,6 +18,7 @@ function App() {
         <Hero />
         <Features />
         <Recommendation />
+        <PurchaseChannels />
         <Slogan />
       </main>
       <Footer />

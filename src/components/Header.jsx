@@ -32,6 +32,7 @@ const Header = ({ onActivate }) => {
                 <nav className={menuOpen ? 'active' : ''}>
                     <a href="#hero" onClick={() => setMenuOpen(false)}>首页</a>
                     <a href="#features" onClick={() => setMenuOpen(false)}>功能特性</a>
+                    <a href="#purchase" onClick={() => setMenuOpen(false)}>获取软件</a>
                     <button className="activate-btn" onClick={() => { onActivate(); setMenuOpen(false); }}>立即激活</button>
                     <a href="https://apps.apple.com/us/app/mvision-music/id6754966409" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>
                         <button className="download-btn">
