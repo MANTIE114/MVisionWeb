@@ -2,7 +2,7 @@ import React from 'react';
 import './PurchaseChannels.css';
 
 const PurchaseChannels = () => {
-    const xhsUrl = "https://www.xiaohongshu.com/user/profile/5c9034680000000012036a9c?xsec_token=ABWJqxQZ47ba0t2jkzHkD-qZY4ZNXlh1cnkEqnB7HJJxI=&xsec_source=pc_search";
+    const xhsUrl = "https://www.xiaohongshu.com/goods-detail-tob/69802158f0c4840001cd641b";
     const appStoreUrl = "https://apps.apple.com/us/app/mvision-music/id6754966409";
 
     return (
