@@ -61,12 +61,18 @@
     align-items: center;
 }
 
+.recommendation-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
 /* Pseudo thumbnail effect */
 .video-preview::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1000') center/cover;
+    background: var(--bg-image) center/cover;
     opacity: 0.4;
     transition: opacity 0.4s ease;
 }
