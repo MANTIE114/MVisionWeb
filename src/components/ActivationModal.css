@@ -21,27 +21,69 @@
     max-width: 900px;
     max-height: 90vh;
     position: relative;
-    padding: 2rem;
+    padding: 5rem 2rem 2rem;
     overflow-y: auto;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
     animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.modal-close {
-    position: absolute;
-    top: 1rem;
-    right: 1.5rem;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 2rem;
-    cursor: pointer;
-    opacity: 0.5;
-    transition: opacity 0.2s;
+.modal-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.modal-close:hover {
-    opacity: 1;
+.tab-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--color-text-muted);
+    padding: 0.6rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.tab-btn.active {
+    background: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 15px var(--color-primary-glow);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+    z-index: 100;
+    padding: 0;
+    outline: none;
+}
+
+.modal-close svg {
+    width: 18px;
+    height: 18px;
+    display: block;
 }
 
 .modal-header {
@@ -68,11 +110,116 @@
     justify-content: center;
 }
 
+.redeem-content {
+    width: 100%;
+}
+
+.redemption-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.platform-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.platform-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.platform-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem;
+}
+
+.platform-card.apple .platform-icon {
+    background: white;
+    color: black;
+}
+
+.platform-card.android .platform-icon {
+    background: #3ddc84;
+    color: white;
+}
+
+.platform-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.platform-text h4 {
+    margin: 0 0 0.2rem 0;
+    font-size: 1.1rem;
+    color: white;
+}
+
+.platform-text p {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+}
+
+.platform-text .location {
+    display: block;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.platform-text strong {
+    color: var(--color-primary);
+}
+
+.redeem-visual-guide h5 {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    margin: 0 0 1.5rem 0;
+    text-align: center;
+    position: relative;
+}
+
+.redeem-visual-guide h5::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: var(--color-primary);
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
 .activation-img {
     width: 100%;
     height: auto;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 640px) {
+    .redemption-info {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .platform-card {
+        padding: 1.2rem;
+    }
 }
 
 @keyframes fadeIn {
