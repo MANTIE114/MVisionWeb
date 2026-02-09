@@ -2,7 +2,8 @@ import React from 'react';
 import './PurchaseChannels.css';
 
 const PurchaseChannels = () => {
-    const xhsUrl = "https://www.xiaohongshu.com/goods-detail-tob/69802158f0c4840001cd641b";
+    const xhsProfileUrl = "https://www.xiaohongshu.com/user/profile/5c9034680000000012036a9c?xsec_token=ABWJqxQZ47ba0t2jkzHkD-qZY4ZNXlh1cnkEqnB7HJJxI=&xsec_source=pc_search";
+    const xhsGoodsUrl = "https://www.xiaohongshu.com/goods-detail-tob/69802158f0c4840001cd641b";
     const appStoreUrl = "https://apps.apple.com/us/app/mvision-music/id6754966409";
 
     return (
@@ -31,9 +32,14 @@ const PurchaseChannels = () => {
                         </div>
                         <h3>小红书官方店</h3>
                         <p>关注官方小红书账号，获取最新活动福利与激活码购买。</p>
-                        <a href={xhsUrl} target="_blank" rel="noopener noreferrer" className="channel-btn">
-                            前往小红书购买
-                        </a>
+                        <div className="channel-actions">
+                            <a href={xhsGoodsUrl} target="_blank" rel="noopener noreferrer" className="channel-btn goods-btn">
+                                立即购买商品
+                            </a>
+                            <a href={xhsProfileUrl} target="_blank" rel="noopener noreferrer" className="channel-btn profile-btn">
+                                访问官方主页
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
