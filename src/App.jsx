@@ -8,6 +8,7 @@ import PurchaseChannels from './components/PurchaseChannels';
 import Slogan from './components/Slogan';
 import Footer from './components/Footer';
 import ActivationModal from './components/ActivationModal';
+import SpringFestivalEgg from './components/SpringFestivalEgg';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -15,6 +16,7 @@ function App() {
   return (
     <div className="app">
       <Header onActivate={() => setIsModalOpen(true)} />
+      <SpringFestivalEgg />
       <main>
         <Hero />
         <Features />
