@@ -20,8 +20,7 @@
     background-position: center;
     z-index: 0;
     will-change: transform;
-    transition: transform 0.1s linear;
-    /* Optional: smooth out jitter if any, though raw set is better usually */
+    /* transition removed to prevent conflict with JS scroll updates */
 }
 
 .hero-background::after {
