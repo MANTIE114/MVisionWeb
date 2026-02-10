@@ -102,25 +102,29 @@
 .egg-close {
     position: absolute;
     right: 8px;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 0;
+    bottom: 0;
+    margin: auto;
     background: none;
     border: none;
     color: rgba(255, 255, 255, 0.5);
     cursor: pointer;
-    padding: 4px;
-    margin-left: auto;
-    display: none;
-    /* Only show when expanded */
+    padding: 0;
     width: 24px;
     height: 24px;
+    display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s linear;
 }
 
 .spring-egg-content:hover .egg-close,
 .spring-egg-content.expanded .egg-close {
-    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+    transition-delay: 0.2s;
 }
 
 .egg-close:hover {

@@ -9,6 +9,7 @@ import Slogan from './components/Slogan';
 import Footer from './components/Footer';
 import ActivationModal from './components/ActivationModal';
 import SpringFestivalEgg from './components/SpringFestivalEgg';
+import SpringFestivalBackground from './components/SpringFestivalBackground';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -17,6 +18,7 @@ function App() {
     <div className="app">
       <Header onActivate={() => setIsModalOpen(true)} />
       <SpringFestivalEgg />
+      <SpringFestivalBackground />
       <main>
         <Hero />
         <Features />
