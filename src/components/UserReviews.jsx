@@ -21,6 +21,15 @@ const UserReviews = () => {
                     <span className="badge">用户反馈</span>
                     <h2>大家怎么说</h2>
                     <p className="subtitle">来自真实用户的体验分享</p>
+                    <div className="scroll-hint">
+                        <svg viewBox="0 0 24 24" fill="currentColor" className="animate-left">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+                        </svg>
+                        <span>左右滑动查看更多</span>
+                        <svg viewBox="0 0 24 24" fill="currentColor" className="animate-right">
+                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+                        </svg>
+                    </div>
                 </div>
 
                 <div className="reviews-scroll-container">

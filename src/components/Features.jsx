@@ -11,7 +11,7 @@ const features = [
   {
     title: "多维融合播放",
     description: "彻底打破常规。MVision 独有的融合播放模式，让您在沉浸观影的同时，同屏掌握热力图、播放记录与实时评论。通过智能数据可视化，感知每一个精彩瞬间。",
-    images: ["/assets/feature-fusion-1.jpg", "/assets/feature-fusion-2.jpg", "/assets/feature-fusion-3.jpg"],
+    images: ["/assets/feature-fusion-1.jpg", "/assets/feature-fusion-2.jpg", "/assets/feature-fusion-3.jpg", "/assets/feature-fusion-4.png"],
     layout: "center"
   },
   {
@@ -23,7 +23,7 @@ const features = [
   {
     title: "直播中心",
     description: "集成丰富的直播频道，支持流畅的频道切换与实时预览，尽享电视直播乐趣。",
-    images: ["/assets/feature-live.jpg", "/assets/feature-live-2.jpg"],
+    images: ["/assets/feature-live.jpg", "/assets/feature-live-2.jpg", "/assets/feature-live-3.png"],
     align: "right"
   },
   {
