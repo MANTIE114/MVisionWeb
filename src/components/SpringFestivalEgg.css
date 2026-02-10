@@ -25,7 +25,7 @@
 
 .spring-egg-content:hover,
 .spring-egg-content.expanded {
-    width: 280px;
+    width: 320px;
     /* Expanded width */
     padding-right: 20px;
     background: linear-gradient(135deg, #c62828, #b71c1c);
@@ -101,23 +101,24 @@
 
 .egg-close {
     position: absolute;
-    right: 8px;
+    right: 12px;
     top: 0;
     bottom: 0;
     margin: auto;
-    background: none;
+    background: rgba(0, 0, 0, 0.1);
     border: none;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.7);
     cursor: pointer;
     padding: 0;
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
     display: flex;
     align-items: center;
     justify-content: center;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.2s linear;
+    border-radius: 50%;
+    transition: all 0.2s ease;
 }
 
 .spring-egg-content:hover .egg-close,
@@ -129,8 +130,8 @@
 
 .egg-close:hover {
     color: #fff;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
@@ -147,6 +148,6 @@
     }
 
     .spring-egg-content.expanded {
-        width: 260px;
+        width: 290px;
     }
 }
