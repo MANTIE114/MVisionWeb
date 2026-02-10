@@ -1,11 +1,42 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import './Hero.css';
 
 const Hero = () => {
+    const bgRef = useRef(null);
+    const contentRef = useRef(null);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollY = window.scrollY;
+            const windowHeight = window.innerHeight;
+
+            // Optimization: Stop animating when hero is out of view
+            if (scrollY <= windowHeight) {
+                if (bgRef.current) {
+                    // Apple-style zoom effect: background scales up slowly
+                    const scale = 1 + scrollY * 0.0003;
+                    bgRef.current.style.transform = `scale(${scale})`;
+                }
+
+                if (contentRef.current) {
+                    // Content fades out and moves up
+                    const opacity = Math.max(0, 1 - (scrollY / (windowHeight * 0.5)));
+                    const translateY = scrollY * 0.2;
+
+                    contentRef.current.style.opacity = opacity;
+                    contentRef.current.style.transform = `translateY(${translateY}px)`;
+                }
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     return (
         <section id="hero" className="hero">
-            <div className="hero-background"></div>
-            <div className="hero-content">
+            <div ref={bgRef} className="hero-background"></div>
+            <div ref={contentRef} className="hero-content">
                 <h1>极致视听体验</h1>
                 <p>尽在 Apple TV MVision</p>
                 <div className="hero-actions">
