@@ -69,5 +69,23 @@
 .footer-copy {
     color: rgba(255, 255, 255, 0.2);
     font-size: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+.footer-views {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
     margin-top: 1rem;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.footer-views>span {
+    display: inline-flex !important;
+    /* Override Busuanzi inline style if needed, though usually not needed */
+    align-items: center;
+    gap: 0.3rem;
 }
