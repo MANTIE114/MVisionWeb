@@ -60,20 +60,28 @@ const Features = () => {
   const appStoreUrl = "https://apps.apple.com/us/app/mvision-music/id6754966409";
 
   useEffect(() => {
-    const intervals = features.map((feature, idx) => {
+    const intervals = {};
+
+    features.forEach((feature, idx) => {
       if (feature.images && feature.images.length > 1) {
-        return setInterval(() => {
+        intervals[idx] = setInterval(() => {
           setActiveCarouselIndices(prev => ({
             ...prev,
             [idx]: ((prev[idx] || 0) + 1) % feature.images.length
           }));
         }, 4000);
       }
-      return null;
     });
 
-    return () => intervals.forEach(inv => inv && clearInterval(inv));
+    return () => Object.values(intervals).forEach(clearInterval);
   }, []);
+
+  const handleNextSlide = (index, length) => {
+    setActiveCarouselIndices(prev => ({
+      ...prev,
+      [index]: ((prev[index] || 0) + 1) % length
+    }));
+  };
 
   return (
     <section id="features" className="features">
@@ -110,7 +118,11 @@ const Features = () => {
               </a>
             </div>
             <div className="feature-image-container">
-              <div className="feature-image">
+              <div
+                className="feature-image"
+                onClick={() => feature.images.length > 1 && handleNextSlide(index, feature.images.length)}
+                style={{ cursor: feature.images.length > 1 ? 'pointer' : 'default' }}
+              >
                 {feature.images.map((img, imgIdx) => (
                   <img
                     key={imgIdx}
@@ -127,7 +139,10 @@ const Features = () => {
                     <span
                       key={dotIdx}
                       className={`dot ${dotIdx === activeIdx ? 'active' : ''}`}
-                      onClick={() => setActiveCarouselIndices(prev => ({ ...prev, [index]: dotIdx }))}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setActiveCarouselIndices(prev => ({ ...prev, [index]: dotIdx }));
+                      }}
                     ></span>
                   ))}
                 </div>
