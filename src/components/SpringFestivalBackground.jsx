@@ -62,6 +62,27 @@ const SpringFestivalBackground = () => {
             requestAnimationFrame(animate);
         };
 
+        let mouseX = 0;
+        let mouseY = 0;
+        const handleMouseMove = (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            // Slight push effect
+            particles.forEach(p => {
+                const dx = p.x - mouseX;
+                const dy = p.y - mouseY;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+                if (distance < 100) {
+                    const forceDirectionX = dx / distance;
+                    const forceDirectionY = dy / distance;
+                    const force = (100 - distance) / 100;
+                    p.x += forceDirectionX * force * 2;
+                    p.y += forceDirectionY * force * 2;
+                }
+            });
+        };
+        window.addEventListener('mousemove', handleMouseMove);
+
         animate();
 
         const handleResize = () => {
@@ -70,7 +91,36 @@ const SpringFestivalBackground = () => {
         };
 
         window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
+
+        // Click interaction
+        const handleClick = (e) => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+
+            import('canvas-confetti').then((module) => {
+                const confetti = module.default;
+                confetti({
+                    particleCount: 30,
+                    spread: 40,
+                    origin: { x, y },
+                    startVelocity: 40,
+                    colors: ['#FFD700', '#D32F2F', '#FFFFFF'], // Gold, Red, White
+                    disableForReducedMotion: true,
+                    shapes: ['square', 'circle'],
+                    scalar: 0.8,
+                    drift: 0,
+                    ticks: 60
+                });
+            });
+        };
+
+        window.addEventListener('click', handleClick);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+            window.removeEventListener('click', handleClick);
+            window.removeEventListener('mousemove', handleMouseMove);
+        };
     }, []);
 
     return <canvas ref={canvasRef} className="spring-festival-bg" />;
