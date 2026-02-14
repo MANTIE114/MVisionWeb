@@ -17,7 +17,7 @@ const Recommendation = () => {
             title: "年度最佳推荐：MVision 的设计与体验",
             upName: "UP主口碑力荐",
             desc: "UP主深度评测：2025年度体验最好的 Apple TV 客户端...",
-            cover: "/assets/feature-menu-3.png",
+            cover: "/assets/feature-menu-3.jpg",
             isAward: true
         }
     ];

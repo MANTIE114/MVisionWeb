@@ -125,7 +125,7 @@
 .spring-egg-content.expanded .egg-close {
     opacity: 1;
     pointer-events: auto;
-    transition-delay: 0.2s;
+    transition-delay: 2s;
 }
 
 .egg-close:hover {

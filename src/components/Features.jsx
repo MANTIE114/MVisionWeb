@@ -5,37 +5,37 @@ const features = [
   {
     title: "主菜单概览",
     description: "简洁直观的主菜单界面，快速访问您的媒体库、直播、动态及设置。",
-    images: ["/assets/feature-menu.jpg", "/assets/feature-menu-2.png", "/assets/feature-menu-3.png"],
+    images: ["/assets/feature-menu.jpg", "/assets/feature-menu-2.jpg", "/assets/feature-menu-3.jpg"],
     align: "left"
   },
   {
     title: "多维融合播放",
     description: "彻底打破常规。MVision 独有的融合播放模式，支持 4K/HDR/杜比视界 智能清晰度切换。让您在沉浸观影的同时，同屏掌握热力图、播放记录与实时评论。通过智能数据可视化，感知每一个精彩瞬间。",
-    images: ["/assets/feature-fusion-1.jpg", "/assets/feature-fusion-2.jpg", "/assets/feature-fusion-3.jpg", "/assets/feature-fusion-4.png"],
+    images: ["/assets/feature-fusion-1.jpg", "/assets/feature-fusion-3.jpg", "/assets/feature-fusion-4.jpg", "/assets/feature-fusion-5.jpg", "/assets/feature-fusion-6.jpg"],
     layout: "center"
   },
   {
     title: "媒体索引首页",
     description: "全新的视觉导视系统，为您呈现实时更新的媒体资讯与个性化推荐。",
-    images: ["/assets/feature-index.jpg", "/assets/feature-detail.jpg"],
+    images: ["/assets/feature-index.jpg"],
     align: "left"
   },
   {
     title: "直播中心",
     description: "集成丰富的直播频道，支持流畅的清晰度切换与实时预览，尽享电视直播乐趣。",
-    images: ["/assets/feature-live.jpg", "/assets/feature-live-2.jpg", "/assets/feature-live-3.png"],
+    images: ["/assets/feature-live-2.jpg", "/assets/feature-live-3.jpg"],
     align: "right"
   },
   {
     title: "灵动动态与聚合",
     description: "实时捕捉您常看 UP 主的最新动态，确保每一份志趣相投的更新都不被错过。",
-    images: ["/assets/feature-feed-1.png", "/assets/feature-feed-2.png", "/assets/feature-feed-3.png"],
+    images: ["/assets/feature-feed-new.jpg"],
     align: "left"
   },
   {
     title: "智能全局搜索",
     description: "强大的全局搜索功能，一键直达您想看的任何内容，支持多维过滤。",
-    images: ["/assets/feature-search.jpg", "/assets/feature-search-2.jpg"],
+    images: ["/assets/feature-search.jpg"],
     align: "right"
   },
   {
@@ -50,10 +50,10 @@ const features = [
         title: "自定义工作空间",
         description: "让您的 Apple TV 界面更符合个人使用习惯。",
         images: [
-          "/assets/feature-custom-1.png",
-          "/assets/feature-custom-2.png",
-          "/assets/feature-custom-3.png",
-          "/assets/feature-custom-4.png"
+          "/assets/feature-custom-1.jpg",
+          "/assets/feature-custom-2.jpg",
+          "/assets/feature-custom-3.jpg",
+          "/assets/feature-custom-4.jpg"
         ]
       }
     ]
